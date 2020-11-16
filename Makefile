@@ -1,10 +1,11 @@
 CC ?= gcc
 CFLAGS = -Wall -Wextra -Werror -pedantic -std=c99
 
-OBJ = main.o utils.o
+OBJ = src/main.o src/utils.o
 BIN = main
 
 $(BIN): $(OBJ)
+	$(CC) $(LDFLAGS) -o $@ $^
 
 .PHONY: clean
 
