@@ -1,7 +1,7 @@
 CC ?= gcc
 CFLAGS = -Wall -Wextra -Werror -pedantic -std=c99
 
-OBJ = main.o
+OBJ = main.o utils.o
 BIN = main
 
 $(BIN): $(OBJ)
