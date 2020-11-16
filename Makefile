@@ -4,10 +4,17 @@ CFLAGS = -Wall -Wextra -Werror -pedantic -std=c99
 OBJ = src/main.o src/utils.o
 BIN = main
 
+DOXYFILE = doc/Doxyfile
+DOCDIR = doc/html
+
 $(BIN): $(OBJ)
 	$(CC) $(LDFLAGS) -o $@ $^
 
-.PHONY: clean
+.PHONY: doc
+doc: $(DOXYFILE)
+	doxygen $^
 
+
+.PHONY: clean
 clean:
-	$(RM) $(OBJ) $(BIN)
+	$(RM) -r  $(OBJ) $(BIN) $(DOCDIR)
