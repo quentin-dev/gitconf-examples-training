@@ -5,7 +5,7 @@
 /// @brief Utility functions for our examples
 /// @author Quentin Barbarat
 
-/// @brief Says hello to the user on stdut
+/// @brief Says hello to the user on stdout
 ///
 void hello(void);
 
